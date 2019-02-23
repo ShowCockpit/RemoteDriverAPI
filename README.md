@@ -5,7 +5,8 @@ Additionaly, a few example projects are included.
 
 # LICENSE
 
-The Remote Driver API is licensed under the GNU Lesser General Public License v2.1 (LGPL-2.1).
+The Remote Driver API is licensed under the GNU General Public License v3.0.
+Please check the license terms before using this API.
 
 # Contributing to this repository
 
