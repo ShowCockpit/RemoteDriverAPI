@@ -1,7 +1,8 @@
 # RD/ShowCockpit Remote Driver API
 
-This repository contains documentation for the RD/ShowCockpit Remote Driver API.
-Additionaly, a few example projects are included.
+This repository a few example projects for the RD/ShowCockpit Remote Driver API.
+
+Additionaly, the [Wiki](https://github.com/ShowCockpit/RemoteDriverAPI/wiki) contains the documentation for this API.
 
 ## License Information
 
