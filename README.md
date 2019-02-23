@@ -7,6 +7,7 @@ Additionaly, a few example projects are included.
 
 The Remote Driver API is licensed under the GNU General Public License v3.0.
 Please check the license terms before using this API.
+The usage of the Remote Driver API is also subject to the RD/ShowCockpit Terms and Conditions.
 
 ## Contributing to this repository
 
