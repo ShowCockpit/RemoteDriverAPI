@@ -25,3 +25,14 @@ Provide more context by answering these questions:
 * **Did the problem start happening recently** (e.g. after updating to a new version of ShowCockpit) or was this always a problem?
 * If the problem started happening recently, **can you reproduce the problem with an older version of ShowCockpit?** What's the most recent version in which the problem doesn't happen? You can download older versions of ShowCockpit from [the website Downloads page](https://showcockpit.com/site/downloads/).
 * **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
+
+## Submitting Pull Requests
+
+The process described here has several goals:
+
+- Maintain ShowCockpit Remote Driver API quality
+- Fix problems that are important to users
+- Engage the community in working toward the best possible Remote Driver API
+- Enable a sustainable system for ShowCockpit's maintainers to review contributions
+
+If you are new to GIT terminology (Fork, Pull Request, etc.), please refer to this guide: https://guides.github.com/activities/contributing-to-open-source/
