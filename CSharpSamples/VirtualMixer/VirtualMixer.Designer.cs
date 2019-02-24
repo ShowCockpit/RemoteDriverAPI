@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace VirtualMixer
 {
     partial class VirtualMixer
     {

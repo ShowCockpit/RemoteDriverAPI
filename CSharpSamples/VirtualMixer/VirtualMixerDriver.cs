@@ -4,7 +4,7 @@ using ShowCockpit.Shared.Messages;
 using ShowCockpit.Shared.Parameters;
 using System.Diagnostics;
 
-namespace WindowsFormsApp1
+namespace VirtualMixer
 {
     [ShowElementDriver("Virtual Mixer")]
     [ShowElementDriverAuthor("Your Name", "your@email.com")]
