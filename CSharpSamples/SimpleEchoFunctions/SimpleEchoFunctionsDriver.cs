@@ -90,6 +90,34 @@ namespace SimpleEchoFunctions
                 Log(LogLevel.Error, "Error executing \"" + obj.FunctionID + "\": " + ex.Message);
             }
         }
+
+        /// <summary>
+        /// Overriding this function will allow you to give the hint for 
+        /// the next parameters set when a function is assigned to a control.
+        /// This is useful when you want to assign a group of buttons, you can
+        /// use this function to auto-increment the parameter
+        /// </summary>
+        /// <param name="functionID">the Function Name</param>
+        /// <param name="paramList">The set of parameters</param>
+        /// <returns>The new set of parameters</returns>
+        public override ParametersList GetNextParamHint(string functionID, ParametersList paramList)
+        {
+            // Usually you start by switching the function name
+            // (not so useful in this example, but here it is for your reference and convenience)
+            switch(functionID)
+            {
+                case "Echo Fader":
+                case "Echo Button":
+                    // Get the value to integer variable, increment and then create the ParameterVar variable to assign again to the parameters list
+                    paramList["Input Number"].IncrementInt();
+
+                    // You could also do this the hard way:
+                    // paramList["Input Number"] = ParameterVar.CreateInt(paramList["Input Number"].ToInt() + 1);
+                    break;
+            }
+
+            return paramList;
+        }
     }
 }
 
