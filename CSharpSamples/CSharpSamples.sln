@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualMixer", "VirtualMixer\VirtualMixer.csproj", "{0A94355D-824A-4A76-A24A-8610CE2D0D04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleEchoFunctions", "SimpleEchoFunctions\SimpleEchoFunctions.csproj", "{2A4C7BC2-6E78-46C1-AE83-73AA9DD78607}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0A94355D-824A-4A76-A24A-8610CE2D0D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A94355D-824A-4A76-A24A-8610CE2D0D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A94355D-824A-4A76-A24A-8610CE2D0D04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4C7BC2-6E78-46C1-AE83-73AA9DD78607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4C7BC2-6E78-46C1-AE83-73AA9DD78607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4C7BC2-6E78-46C1-AE83-73AA9DD78607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4C7BC2-6E78-46C1-AE83-73AA9DD78607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
