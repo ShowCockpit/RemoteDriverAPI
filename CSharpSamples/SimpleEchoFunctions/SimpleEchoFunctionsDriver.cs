@@ -17,15 +17,17 @@ namespace SimpleEchoFunctions
         public SimpleEchoFunctionsDriver() : base()
         {
             // Populate list of functions
-            RegisterFunction(new Function("Echo Fader", "Prints the fader value to the console", ControlType.Fader, null, new ParameterDescriptor()
+            RegisterFunction(new Function("Echo Fader", "Prints the fader value to the console", ControlType.Fader, new ParameterDescriptor()
             {
-                // No parameters
+                // Function parameters
+                {"Input Number", ParameterDefinition.CreateInt("The magic number that identifies this fader", 1, 1, 10) }
             }), FuncEchoFader);
 
             // Populate list of functions
-            RegisterFunction(new Function("Echo Button", "Prints the button events to the console", ControlType.Button, null, new ParameterDescriptor()
+            RegisterFunction(new Function("Echo Button", "Prints the button events to the console", ControlType.Button, new ParameterDescriptor()
             {
-                // No parameters
+                // Function parameters
+                {"Input Number", ParameterDefinition.CreateInt("The magic number that identifies this fader", 1, 1, 10) }
             }), FuncEchoButton);
         }
 
@@ -42,8 +44,15 @@ namespace SimpleEchoFunctions
                 if (obj.ControlEvent.Type != ControlEventType.FaderMoved)
                     return;
 
+                // Validate any parameters
+                if (!obj.ParametersList.ContainsKey("Input Number"))
+                    return;
+
+                // Get the parameter value
+                int inputNumber = obj.ParametersList["Input Number"].ToInt();
+
                 // Print the fader value to the console
-                Console.WriteLine("Fader value: " + obj.ControlEvent.ValueDouble.ToString("F2"));
+                Console.WriteLine("Fader " + inputNumber + " value: " + obj.ControlEvent.ValueDouble.ToString("F2"));
             }
             catch (Exception ex)
             {
@@ -65,8 +74,15 @@ namespace SimpleEchoFunctions
                 if (obj.ControlEvent.Type != ControlEventType.ButtonPressed && obj.ControlEvent.Type != ControlEventType.ButtonReleased)
                     return;
 
+                // Validate any parameters
+                if (!obj.ParametersList.ContainsKey("Input Number"))
+                    return;
+
+                // Get the parameter value
+                int inputNumber = obj.ParametersList["Input Number"].ToInt();
+
                 // Print the button event to the console
-                Console.WriteLine("Button " + (obj.ControlEvent.Type == ControlEventType.ButtonPressed ? "pressed" : "released"));
+                Console.WriteLine("Button " + inputNumber + " " + (obj.ControlEvent.Type == ControlEventType.ButtonPressed ? "pressed" : "released"));
             }
             catch (Exception ex)
             {

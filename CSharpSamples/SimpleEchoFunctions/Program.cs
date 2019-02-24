@@ -18,12 +18,26 @@ namespace SimpleEchoFunctions
             // Create API connector object
             SCAPIConnector api = new SCAPIConnector(drv);
 
+            // Events Handling
+            api.Connected += Api_Connected;
+            api.Disconnected += Api_Disconnected;
+
             // Connect to ShowCockpit
             api.Connect();
 
             // Keep the process alive
             while(true)
                 Console.ReadLine();
+        }
+
+        private static void Api_Disconnected(object sender, EventArgs e)
+        {
+            Console.WriteLine("Disconnected from SC");
+        }
+
+        private static void Api_Connected(object sender, EventArgs e)
+        {
+            Console.WriteLine("Connected to SC");
         }
     }
 }
