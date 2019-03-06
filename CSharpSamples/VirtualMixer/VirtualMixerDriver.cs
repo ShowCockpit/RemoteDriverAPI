@@ -62,7 +62,7 @@ namespace VirtualMixer
             // Generate and invoke the ControlEvent
             ControlEvent?.Invoke(this, new MsgControlEvent()
             {
-                ControlID = "Fader " + (buttonIndex + 1),
+                ControlID = "Button " + (buttonIndex + 1),
                 ElementID = this.DriverName,
                 Type = press ? ControlEventType.ButtonPressed : ControlEventType.ButtonReleased,
                 value = press ? 1.0 : 0.0
