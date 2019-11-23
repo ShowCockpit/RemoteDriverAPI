@@ -11,9 +11,6 @@ namespace VirtualMixer
     [ShowElementDriverDescription("A window with a virtual mixer")]
     public class VirtualMixerDriver : ShowDriver
     {
-        // Override the ShowDriver.ControlEvent event to generate events in this class
-        public override event MsgControlEventHandler ControlEvent;
-
         // Event to pass information from this driver to the VirtualMixer GUI class
         internal event FaderChangedValueHandler FaderChangedValue;
         internal delegate void FaderChangedValueHandler(object sender, FaderChangedValueEventArgs e);
@@ -40,7 +37,7 @@ namespace VirtualMixer
         public void FaderAction(int faderIndex, float valNorm)
         {
             // Generate and invoke the ControlEvent
-            ControlEvent?.Invoke(this, new MsgControlEvent()
+            GenerateControlEvent(this, new MsgControlEvent()
             {
                 ControlID = "Fader " + (faderIndex + 1),
                 ElementID = this.DriverName,
@@ -60,7 +57,7 @@ namespace VirtualMixer
         public void ButtonAction(int buttonIndex, bool press)
         {
             // Generate and invoke the ControlEvent
-            ControlEvent?.Invoke(this, new MsgControlEvent()
+            GenerateControlEvent(this, new MsgControlEvent()
             {
                 ControlID = "Button " + (buttonIndex + 1),
                 ElementID = this.DriverName,
